@@ -1,4 +1,12 @@
+---
+title: 'Genomics of Infectious Disease Pathogens: Ebola virus practical '
+author: Erik M Volz
+date: March 15, 2019
+...
 
+For the latest version, navigate to: 
+
+[https://github.com/emvolz-phylodynamics/ebola2014-phylodynamicsPractical](https://github.com/emvolz-phylodynamics/ebola2014-phylodynamicsPractical)
 
 # Exploratory phylodynamics of early EBOV epidemic in Sierra Leone
 
@@ -19,7 +27,13 @@ In the course of this practical you will learn how to
 * extract and analyze 'meta-data' associated with each sequence such as the time of sampling and country of origin
 * carry out ancestral state estimation to infer the likely location of lineages over the history fo the epidemic.
 
+You will carry out this analysis on a random subset of the available sequences and your results will be unique. 
+Make a note of the main results of your analysis:
 
+1. Estimate the reproduction number in Siera Leone in mid-2014
+2. Estimate when the epidemic peaked 
+3. Estimate when the epidemic originated in humans
+4. Estimate the country or origin of the epidemic 
 
 
 ## Installation and setup
@@ -93,7 +107,7 @@ Now we will create a unique sub-sample of these sequences.
 Since your results will be based on a different sample of sequences, your results will likely differ from what is presented here. 
 You can try re-running your analysis with different subsamples and options. 
 
-Choose a 'seed' for random number generation distinct from the `1111` value used here. Make a note of this number. Your results will be reproducible with this seed.
+Choose a 'seed' for random number generation distinct from the `2014` value used here (for example, your CID number). Make a note of this number. Your results will be reproducible with this seed.
 
 ```r
 set.seed( 2014 ) 
@@ -529,7 +543,7 @@ Now we can estimate Ne(t) using Bayesian MCMC.
 sg = skygrowth.mcmc ( sl_tree, res = 20 , quiet = TRUE )
 ```
 
-Let's plot on the calendar time axis. According to WHO records, the peak number of cases in Sierra Leone (maximum number of cases per weak) occurred on October 31, 2014. We include a vertical red line showing this time point. 
+Let's plot on the calendar time axis. According to WHO records, the peak number of cases in Sierra Leone (maximum number of cases per week) occurred on October 31, 2014. We include a vertical red line showing this time point. 
 
 ```r
 # first we adjust the time axis so that is no longer years before most recent sample 
