@@ -1,8 +1,3 @@
----
-title: 'Genomics of Infectious Disease Pathogens: Ebola virus practical '
-author: Erik M Volz
-date: March 15, 2019
-...
 
 For the latest version, navigate to: 
 
