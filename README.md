@@ -333,7 +333,7 @@ Let's start by placing the root of the tree on a branch that is likely to have t
 One way to do this is to use the `rtt` command, which uses root-to-tip regression; this selects the root position to maximise the variance in evolutionary distance explained by the tree. 
 
 ```r
-rooted_ebov_ml <- rtt( ebov_ml, sampleDates )
+rooted_ebov_ml <- rtt( multi2di(ebov_ml), sampleDates )
 plot( ladderize(rooted_ebov_ml) , show.tip.label=FALSE )
 add.scale.bar() 
 ```
